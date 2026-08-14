@@ -6,11 +6,12 @@ class Student:
 
 
 class Grade:
-    def __init__(self, course, assessment, mark, total_marks):
+    def __init__(self, course, assessment, mark, total_marks, feedback=""):
         self.course = course
         self.assessment = assessment
         self.mark = mark
         self.total_marks = total_marks
+        self.feedback = feedback
 
 
 def view_grades(student):
@@ -33,12 +34,12 @@ def view_grades(student):
     for course, grades in courses.items():
         print(f"\nCourse: {course}")
 
-        for grade in grades:
-            print(
-                f"  {grade.assessment}: "
-                f"{grade.mark}/{grade.total_marks}"
-            )
-
+for grade in grades:
+    print(
+        f"  {grade.assessment}: "
+        f"{grade.mark}/{grade.total_marks}"
+    )
+    print(f"  Feedback: {grade.feedback}")
 
 # Create students
 student1 = Student("S001", "Mostafa Ahmed")
