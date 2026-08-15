@@ -1,5 +1,5 @@
 
-class Course:
+class Course;
     def __init__(self, course_id, name, available=True):
         self.course_id = course_id
         self.name = name
